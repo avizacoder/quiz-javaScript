@@ -14,11 +14,20 @@ export class UI {
 
     /**
      * 
+     * @param {string} img render to img
+     */
+    showImg(img) {
+       document.getElementById('images').src = img
+    } 
+
+    /**
+     * 
      * @param {string[]} choices the choices of the question
      */
     showChoices(choices, callback) {
         const choicesContainer = document.getElementById('choices')
         choicesContainer.innerHTML = ''
+
         for (let i = 0; i < choices.length; i++ ) {
             const button = document.createElement('button')
             button.innerHTML = choices[i]

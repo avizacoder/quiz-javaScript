@@ -7,10 +7,11 @@ export class Question {
      * @param {string} answer this is the answer of the question
      */
 
-    constructor(text, choices, answer) {
+    constructor(text, choices, answer, image) {
         this.text = text;
         this.choices = choices;
         this.answer = answer;
+        this.image = image
     }
 
     /**
