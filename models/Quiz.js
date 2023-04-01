@@ -20,6 +20,8 @@ export class Quiz {
      */
 
     getQuestionIndex() {
+
+        const randomIndex = Math.floor(Math.random() * this.questions.length)
         return this.questions[this.questionIndex]
     }
 
@@ -27,14 +29,13 @@ export class Quiz {
         return this.questions.length == this.questionIndex
     }
 
-
     /**
      * 
-     * @param {stri} answer some text
+     * @param {string} answer some text
      */
 
     guess(answer) {
-        console.log(answer)
+        
         if(this.getQuestionIndex().correctAnswer(answer)) {
             this.score++
         }

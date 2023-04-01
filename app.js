@@ -7,12 +7,15 @@ import { UI } from './models/UI.js'
  * @param {Quiz} quiz the main quiz Objet
  * @param {UI} ui ui Objet
  */
+
 const renderPage = (quiz, ui) => {
     if(quiz.isEnded()) {
-        console.log(quiz.score)
         ui.showScores(quiz.score)
     }else {
+        
         ui.showQuestion(quiz.getQuestionIndex().text)
+        ui.showImg(quiz.getQuestionIndex().image)
+
         ui.showChoices(quiz.getQuestionIndex().choices, currentChoice => {
             quiz.guess(currentChoice)
             renderPage(quiz, ui)
@@ -24,7 +27,6 @@ const renderPage = (quiz, ui) => {
 
 function main() {
     const quiz = new Quiz(questions)
-    
     const ui = new UI()
 
     renderPage(quiz, ui)
