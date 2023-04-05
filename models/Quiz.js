@@ -20,8 +20,6 @@ export class Quiz {
      */
 
     getQuestionIndex() {
-
-        const randomIndex = Math.floor(Math.random() * this.questions.length)
         return this.questions[this.questionIndex]
     }
 

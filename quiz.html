@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/quiz.css">
 </head>
 <body>
 
@@ -19,13 +21,13 @@
             <img src="img/brand.png" alt="nav brand" class="nav-brand">
             <ul class="nav-menu">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="./index.html">Home</a>
                 </li>
                 <li>
                     <a href="./quiz.html">Telecom quiz</a>
                 </li>
                 <li>
-                    <a href="./about-us.html">Abou us</a>
+                    <a href="./about-us.html">About us</a>
                 </li>
             </ul>
             <ul>
@@ -37,21 +39,24 @@
 
         <hr>
 
-        <header class="showcase">
-            <div class="description">
-                <h2>Glossary  of  words</h2>
-                <p>El objetivo de nuestro trabajo es realizar un glosario en el idioma Inglés. Basado en la carrera de Ingeniería en Redes y Telecomunicaciones, para que nuestros compañeros de la Universidad Privada Domingo Sabio se informen algo de lo que son ACRÓNIMOS.</p>
-            </div>
-            <img src="./img/glosary.jpg" alt="" class="banner">
-        </header>
+        <div class="quiz">
 
-        <div class="card">
-            <img src="./img/quiz.jpg" alt="" class="card-image">
-            <div class="card-description">
-                <h2>Telecom Quiz</h2>
-                <p>El objetivo del juego es contestar en pocos segundos preguntas de los ACRONIMOS en INGLES y poder ver si estás en el top comparándote con el resto de jugadores.</p>
+            <div class="quiz-block-one">    
+                <h2 id="question"></h2>
+                <img src="" alt="" id="images">
             </div>
+
+            <div class="quiz-block-two">
+                <h2>Selecciona una opción</h2>
+                <div id="choices"></div>
+                <footer>
+                    <p id="progress"></p>
+                </footer>
+            </div>
+
         </div>
+
+
 
     </div>
       
