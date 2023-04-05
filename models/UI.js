@@ -44,8 +44,8 @@ export class UI {
      */
     showScores(score) {
         const quizHTML = `
-            <h1>Result</h1>
-            <h2>Your Score: ${score}</h2>
+            <h1 class="result-question">Result</h1>
+            <h2 class="score-question">Your Score: <span>${score}</span></h2>
         `
 
         const container = document.getElementById('container')
