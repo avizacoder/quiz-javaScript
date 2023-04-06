@@ -2,6 +2,7 @@
 .quiz {
     display: flex;
     margin: auto;
+    visibility: hidden;
 }
 
 .quiz-block-one {
@@ -64,5 +65,33 @@
     margin: 5px 0;
     padding: 5px;
     color: black;
+}
+
+/* Time */
+
+#message-danger {
+    background: red;
+    padding: 10px;
+    font-size: 1.5rem;
+    visibility: hidden;
+    margin: 0px 0;
+}
+
+#time {
+    font-size: 2.5rem;
+}
+
+
+/* Start quiz button*/
+#start-quiz {
+    background-color: #68f2f5;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#start-quiz:hover {
+    background-color: aqua;
 }
 

@@ -9,10 +9,11 @@ import { UI } from './models/UI.js'
  */
 
 const renderPage = (quiz, ui) => {
+
+
     if(quiz.isEnded()) {
         ui.showScores(quiz.score)
     }else {
-        
         ui.showQuestion(quiz.getQuestionIndex().text)
         ui.showImg(quiz.getQuestionIndex().image)
 
@@ -23,6 +24,12 @@ const renderPage = (quiz, ui) => {
         ui.showProgress(quiz.questionIndex + 1, quiz.questions.length)
     }
 
+    console.log('Hello world')
+
+}
+
+const render = (quiz, ui) => {
+    console.log('Hello world')
 }
 
 function main() {
@@ -30,7 +37,7 @@ function main() {
     const ui = new UI()
 
     renderPage(quiz, ui)
-
+    render(quiz, ui)
 }
 
 main()

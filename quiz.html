@@ -27,8 +27,12 @@
                     <a href="./quiz.html">Telecom quiz</a>
                 </li>
                 <li>
+                    <a href="./glosaryofword.html">Glosary of words</a>
+                </li>
+                <li>
                     <a href="./about-us.html">About us</a>
                 </li>
+
             </ul>
             <ul>
                 <li>
@@ -39,15 +43,19 @@
 
         <hr>
 
-        <div class="quiz">
-
+        <p id="message-danger"></p>
+        <h2 class="time" id="time">30 s</h2>
+        <button id="start-quiz">Start Quiz</button>
+        
+        <div class="quiz" id="quiz">
+            
             <div class="quiz-block-one">    
                 <h2 id="question"></h2>
                 <img src="" alt="" id="images">
             </div>
 
             <div class="quiz-block-two">
-                <h2>Selecciona una opción</h2>
+                <h2 class="time" id="time">Seleccione la opcion que le parezca correcta: </h2>
                 <div id="choices"></div>
                 <footer>
                     <p id="progress"></p>
@@ -56,12 +64,9 @@
 
         </div>
 
-
-
     </div>
       
     <!--Script-->
     <script src="app.js" type="module"></script>
-
 </body>
 </html>

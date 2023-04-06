@@ -295,7 +295,7 @@ const datas = [
 ]
 
 function tresAleatorios(list) {
-    return [...list].sort(() => (Math.random() > 0.5 ? 1 : -1)).slice(0, 3)
+    return [...list].sort(() => (Math.random() > 0.5 ? 1 : -1)).slice(0, 10)
 }
 
 export const data = tresAleatorios(datas)

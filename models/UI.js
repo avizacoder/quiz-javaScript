@@ -1,6 +1,7 @@
 export class UI {
+    time = 30;
+    interval;
     constructor() {
-
     }
 
     /**
@@ -8,6 +9,7 @@ export class UI {
      * @param {string} text question to render 
      */
     showQuestion(text) {
+        this.quizVisibility()
         const questionTitle = document.getElementById('question')
         questionTitle.innerHTML = text
     }
@@ -56,4 +58,54 @@ export class UI {
         const progress = document.getElementById('progress')
         progress.innerHTML = `Question ${currentIndex} of ${total}`
     }
+
+    timeInterval() {
+        this.interval = setInterval(() => {
+             this.time--
+             if(this.time == 0) {
+
+                const message = document.getElementById('message-danger')
+                message.innerHTML = 'Perdiste la partida'
+                message.style.visibility = 'visible'
+
+                document.getElementById('time').style.visibility = 'hidden'
+                document.getElementById('start-quiz').style.display = 'none'
+
+                clearInterval(this.showProgress(1, 10))
+                clearInterval(this.interval)
+
+             }
+
+             const time = document.getElementById('time')
+             time.innerHTML = `${this.time} s`
+             
+         },1000)
+    }
+
+    quizVisibility() {
+        const startQuizButton = document.getElementById('start-quiz')
+        const quiz = document.getElementById('quiz')
+
+        startQuizButton.addEventListener('click',() => {
+            startQuizButton.style.visibility = 'hidden'
+            quiz.style.visibility = 'visible'
+            this.timeInterval()
+        }) 
+    }
+
+    // glosary
+
+    questionsGlosary(...glosary) {
+        const questionsGlosary = document.getElementById('glosaryofwords')
+
+        glosary.forEach(element => {
+            element.forEach(item => {
+                questionsGlosary.innerHTML += `<div class="glosary"> 
+                <img src="${item.image} alt="image anwer" class="image"> 
+                <p>${item.text} - <span class="answer">${item.answer}</span></p>
+                </div>`
+            })
+        })
+    }
+
 }
