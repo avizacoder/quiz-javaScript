@@ -4,6 +4,7 @@ export class Quiz {
 
     questionIndex = 0
     score = 0
+    time = 20
 
     /**
      * 

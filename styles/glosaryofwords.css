@@ -1,0 +1,17 @@
+.glosary {
+    padding: 15px;
+    background-color: rgb(230, 225, 225);
+    color: #000;
+    margin: 10px;
+    font-size: 28px;
+    border-radius: 10px;
+}
+
+.answer {
+    background-color: aqua;
+    padding: 5px;
+}
+
+.image {
+    width: 160px;
+}
